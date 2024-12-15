@@ -1,4 +1,4 @@
-package com.example.nearby.ui.market_details
+package com.example.nearby.ui.components.market_details
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
