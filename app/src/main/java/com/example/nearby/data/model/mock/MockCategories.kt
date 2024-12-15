@@ -6,7 +6,7 @@ class MockCategories {
     val mockCategories = listOf(
         Category(
             id = "1",
-            name = "Alimentação"
+            name = "Food"
         ),
         Category(
             id = "2",
@@ -14,11 +14,11 @@ class MockCategories {
         ),
         Category(
             id = "3",
-            name = "Farmácia"
+            name = "Drugstore"
         ),
         Category(
             id = "4",
-            name = "Supermercado"
+            name = "Supermarket"
         )
     )
 }
