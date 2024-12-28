@@ -20,7 +20,7 @@ import com.example.nearby.R
 import com.example.nearby.data.model.mock.mockMarkets
 
 @Composable
-fun MarketDetailsInfos(
+fun NearbyMarketDetailsInfos(
     modifier: Modifier = Modifier,
     market: Market
 ) {
@@ -87,7 +87,7 @@ fun MarketDetailsInfos(
 @Preview
 @Composable
 private fun MarketDetailsInfosPreview() {
-    MarketDetailsInfos(
+    NearbyMarketDetailsInfos(
         modifier = Modifier.fillMaxWidth(),
         market = mockMarkets.first()
     )

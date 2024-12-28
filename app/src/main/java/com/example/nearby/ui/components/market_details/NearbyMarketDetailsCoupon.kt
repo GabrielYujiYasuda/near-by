@@ -25,7 +25,7 @@ import com.example.nearby.ui.theme.GreenExtraLight
 import com.example.nearby.ui.theme.Typography
 
 @Composable
-fun MarketDetailsCoupon(
+fun NearbyMarketDetailsCoupon(
     modifier: Modifier = Modifier,
     coupons: List<String>
 ) {
@@ -60,7 +60,7 @@ fun MarketDetailsCoupon(
 @Preview
 @Composable
 private fun MarketDetailsCouponsPreview() {
-    MarketDetailsCoupon(
+    NearbyMarketDetailsCoupon(
         modifier = Modifier.fillMaxWidth(),
         coupons = listOf("FM4345T5", "FM4345T6")
     )

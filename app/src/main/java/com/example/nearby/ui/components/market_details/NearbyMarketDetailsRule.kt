@@ -17,7 +17,7 @@ import com.example.nearby.ui.theme.Gray500
 import com.example.nearby.ui.theme.Typography
 
 @Composable
-fun MarketDetailsRule(
+fun NearbyMarketDetailsRule(
     modifier: Modifier = Modifier,
     rules: List<Rule>
 ) {
@@ -40,7 +40,7 @@ fun MarketDetailsRule(
 @Preview
 @Composable
 private fun MarketDetailsRulesPreview() {
-    MarketDetailsRule(
+    NearbyMarketDetailsRule(
         modifier = Modifier.fillMaxWidth(),
         rules = mockRules
     )
