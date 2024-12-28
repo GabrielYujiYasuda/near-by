@@ -14,7 +14,8 @@ import com.example.nearby.R
 
 @Composable
 fun SplashScreen(
-    modifier: Modifier = Modifier, onNavigateToWelcome: () -> Unit
+    modifier: Modifier = Modifier,
+    onNavigateToWelcome: () -> Unit,
 ) {
     Box(
         modifier = modifier
