@@ -117,7 +117,7 @@ private fun NearbyMarketCardPreview() {
             name = "Grill Flavor",
             description = "Barbecue with noble slices and a huge buffet. A whole experience for the meat lovers",
             coupons = 2,
-            rules = emptyList(),
+//            rules = emptyList(),
             latitude = -23.55974230991911,
             longitude = -46.65814845249887,
             address = "Av. Paulista - Bela Vista",

@@ -30,13 +30,13 @@ import com.example.nearby.data.model.mock.mockMarkets
 import com.example.nearby.ui.components.button.NearbyButton
 import com.example.nearby.ui.components.market_details.NearbyMarketDetailsCoupon
 import com.example.nearby.ui.components.market_details.NearbyMarketDetailsInfos
-import com.example.nearby.ui.components.market_details.NearbyMarketDetailsRule
 import com.example.nearby.ui.theme.Typography
 
 @Composable
-fun MarketScreen(
+fun MarketDetailsScreen(
     market: Market,
-    modifier: Modifier = Modifier,
+    onNavigateBack: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Box(modifier = modifier.fillMaxSize()) {
         Image(
@@ -82,14 +82,14 @@ fun MarketScreen(
                             .padding(vertical = 24.dp)
                     )
 
-                    if (market.rules.isNotEmpty()) {
-                        NearbyMarketDetailsRule(rules = market.rules)
-                        HorizontalDivider(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 24.dp)
-                        )
-                    }
+//                    if (market.rules.isNotEmpty()) {
+//                        NearbyMarketDetailsRule(rules = market.rules)
+//                        HorizontalDivider(
+//                            modifier = Modifier
+//                                .fillMaxWidth()
+//                                .padding(vertical = 24.dp)
+//                        )
+//                    }
 
                     NearbyMarketDetailsCoupon(coupons = listOf("ABC1235"))
 
@@ -104,11 +104,22 @@ fun MarketScreen(
                 )
             }
         }
+
+        NearbyButton(
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(24.dp),
+            iconRes =   R.drawable.ic_arrow_left,
+            onClick = onNavigateBack
+        )
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun MarketScreenPreview(modifier: Modifier = Modifier) {
-    MarketScreen(market = mockMarkets.first())
+    MarketDetailsScreen(
+        market = mockMarkets.first(),
+        onNavigateBack = { }
+    )
 }
