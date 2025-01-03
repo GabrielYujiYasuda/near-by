@@ -40,23 +40,43 @@ android {
 }
 
 dependencies {
+    //region Serialization
     implementation(libs.kotlin.serialization)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.maps.compose)
+    //endregion
+
+    //region Navigation Compose
     implementation(libs.navigation.compose)
+    //endregion
+
+    //region Dependency Injection - Coil
     implementation(libs.coil.compose)
+    //endregion
+
+    //region Google Maps
+    implementation(libs.maps.compose)
+    //endregion
+
+    //region Ktor
+    implementation(platform(libs.ktor.bom))
+    implementation(libs.bundles.ktor)
+    //endregion
+
+    //region Unit Tests - JUnit
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    //endregion
+
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    implementation(platform(libs.androidx.compose.bom))
 }
